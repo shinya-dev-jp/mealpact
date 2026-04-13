@@ -17,15 +17,15 @@ import type { MpUser } from "@/lib/types";
 function LangToggle() {
   const { locale, setLocale } = useI18n();
   return (
-    <div className="flex items-center rounded-full border border-white/10 overflow-hidden bg-white/5">
+    <div className="flex items-center rounded-full border border-gray-200 overflow-hidden bg-gray-100">
       {(["ja", "en"] as const).map((lang) => (
         <button
           key={lang}
           onClick={() => setLocale(lang)}
           className={`px-2 py-0.5 text-[10px] font-semibold transition-colors ${
             locale === lang
-              ? "bg-emerald-600/40 text-emerald-300"
-              : "text-white/30 hover:text-white/60"
+              ? "bg-orange-500 text-white"
+              : "text-gray-400 hover:text-gray-600"
           }`}
         >
           {lang === "ja" ? "JP" : "EN"}
@@ -40,10 +40,10 @@ function LangToggle() {
 // ---------------------------------------------------------------------------
 function AppSkeleton() {
   return (
-    <div className="mx-auto max-w-md min-h-dvh flex flex-col items-center justify-center bg-[#052e16] gap-4 p-8">
-      <div className="w-16 h-16 rounded-2xl bg-emerald-900/60 animate-pulse" />
-      <div className="w-48 h-4 rounded bg-emerald-900/60 animate-pulse" />
-      <div className="w-32 h-3 rounded bg-emerald-900/60 animate-pulse mt-2" />
+    <div className="mx-auto max-w-md min-h-dvh flex flex-col items-center justify-center bg-[#f5f0ff] gap-4 p-8">
+      <div className="w-16 h-16 rounded-2xl bg-purple-200 animate-pulse" />
+      <div className="w-48 h-4 rounded bg-purple-200 animate-pulse" />
+      <div className="w-32 h-3 rounded bg-purple-200 animate-pulse mt-2" />
     </div>
   );
 }
@@ -112,67 +112,66 @@ function WalletAuthScreen({
     }
   }, [isAuthenticating, onAuthSuccess, t]);
 
+  const FEATURES = [
+    { key: "auth.feature1", emoji: "📸", bg: "bg-orange-50", border: "border-orange-100", text: "text-orange-600" },
+    { key: "auth.feature2", emoji: "🏆", bg: "bg-emerald-50", border: "border-emerald-100", text: "text-emerald-600" },
+    { key: "auth.feature3", emoji: "💰", bg: "bg-purple-50", border: "border-purple-100", text: "text-purple-600" },
+  ] as const;
+
   return (
-    <div className="mx-auto max-w-md min-h-dvh flex flex-col bg-[#052e16] relative overflow-hidden">
-      <div className="absolute top-[-20%] left-[-30%] w-[500px] h-[500px] bg-emerald-500/8 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-10%] right-[-20%] w-[400px] h-[400px] bg-emerald-800/20 rounded-full blur-[100px] pointer-events-none" />
+    <div className="mx-auto max-w-md min-h-dvh flex flex-col bg-gradient-to-b from-[#f5f0ff] via-[#ede8ff] to-[#e8e0ff] relative overflow-hidden">
+      {/* Decorative blobs */}
+      <div className="absolute top-[-10%] right-[-20%] w-72 h-72 bg-orange-300/20 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute bottom-[-5%] left-[-15%] w-64 h-64 bg-purple-400/15 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="flex-1 flex flex-col items-center justify-center px-8 gap-6 relative z-10">
-        <div className="relative">
-          <div className="absolute inset-0 bg-emerald-500/20 rounded-3xl blur-xl scale-110" />
+        {/* Hero */}
+        <div className="flex flex-col items-center gap-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/icon-512.png"
-            alt="MealPact"
-            width={88}
-            height={88}
-            className="relative rounded-2xl shadow-2xl"
-          />
+          <img src="/icon-512.png" alt="MealPact" width={96} height={96} className="drop-shadow-xl" />
+          <div className="text-center">
+            <h1 className="text-3xl font-black text-gray-900 tracking-tight">{t("auth.title")}</h1>
+            <p className="text-gray-500 text-sm mt-1 leading-relaxed max-w-[260px] whitespace-pre-line">
+              {t("auth.subtitle")}
+            </p>
+          </div>
         </div>
 
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-white mb-2 tracking-tight">{t("auth.title")}</h1>
-          <p className="text-white/50 text-sm leading-relaxed max-w-[280px] whitespace-pre-line">
-            {t("auth.subtitle")}
-          </p>
-        </div>
-
+        {/* Features */}
         <div className="w-full space-y-2.5">
-          {["auth.feature1", "auth.feature2", "auth.feature3"].map((key, i) => (
-            <div key={i} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3.5">
-              <div className="h-7 w-7 rounded-lg bg-emerald-500/15 flex items-center justify-center shrink-0">
-                <CheckCircle className="h-3.5 w-3.5 text-emerald-400" />
-              </div>
-              <span className="text-white/80 text-[13px] font-medium">{t(key)}</span>
+          {FEATURES.map(({ key, emoji, bg, border }) => (
+            <div key={key} className={`flex items-center gap-3 ${bg} border ${border} rounded-2xl px-4 py-3.5 shadow-sm`}>
+              <span className="text-xl">{emoji}</span>
+              <span className="text-gray-700 text-[13px] font-medium">{t(key)}</span>
             </div>
           ))}
         </div>
 
-        <div className="w-full relative">
-          <div className="absolute inset-0 bg-emerald-500 rounded-2xl blur-lg opacity-20" />
+        {/* CTA */}
+        <div className="w-full space-y-3">
           <button
             onClick={handleSignIn}
             disabled={isAuthenticating}
-            className="relative w-full py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 active:scale-[0.98] transition-all disabled:opacity-50 shadow-lg"
+            className="w-full py-4 rounded-2xl bg-orange-500 hover:bg-orange-400 text-white font-bold text-sm flex items-center justify-center gap-2 active:scale-[0.98] transition-all disabled:opacity-50 shadow-lg shadow-orange-300/40"
           >
             {isAuthenticating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Wallet className="h-4 w-4" />}
             {isAuthenticating ? t("auth.verifying") : t("auth.button")}
           </button>
+
+          {error && <p className="text-red-500 text-xs text-center">{error}</p>}
+
+          <div className="flex items-center justify-center gap-1.5">
+            <ShieldCheck className="h-3.5 w-3.5 text-emerald-500" />
+            <span className="text-[11px] text-emerald-600 font-semibold">Verified Humans Only</span>
+          </div>
+
+          <p className="text-gray-400 text-[11px] text-center">{t("auth.footer")}</p>
         </div>
 
-        {error && <p className="text-red-400 text-xs text-center">{error}</p>}
-        <p className="text-white/25 text-[11px] text-center">{t("auth.footer")}</p>
-
-        {/* Verified Humans Only badge */}
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-          <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
-          <span className="text-[11px] text-emerald-300 font-medium">Verified Humans Only</span>
-        </div>
-
-        {/* Legal footer */}
-        <div className="flex gap-4 text-[10px] text-white/20">
-          <a href="/privacy" className="hover:text-white/50 transition-colors">Privacy Policy</a>
-          <a href="/terms" className="hover:text-white/50 transition-colors">Terms of Service</a>
+        {/* Legal */}
+        <div className="flex gap-4 text-[10px] text-gray-400">
+          <a href="/privacy" className="hover:text-gray-600 transition-colors">Privacy Policy</a>
+          <a href="/terms" className="hover:text-gray-600 transition-colors">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -205,25 +204,25 @@ function MealPactApp() {
   }
 
   return (
-    <div className="mx-auto max-w-md min-h-dvh flex flex-col bg-[#052e16]">
+    <div className="mx-auto max-w-md min-h-dvh flex flex-col bg-[#f5f0ff]">
       {/* Header */}
-      <header className="flex items-center justify-between px-5 py-3.5 border-b border-white/[0.08] bg-[#052e16]/95 backdrop-blur-lg sticky top-0 z-50">
+      <header className="flex items-center justify-between px-5 py-3.5 border-b border-gray-200 bg-white/90 backdrop-blur-lg sticky top-0 z-50">
         <div className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icon-512.png" alt="" width={24} height={24} className="rounded-md" />
-          <span className="font-bold text-white text-sm tracking-tight">MealPact</span>
+          <img src="/icon-512.png" alt="" width={24} height={24} className="drop-shadow-sm" />
+          <span className="font-bold text-gray-900 text-sm tracking-tight">MealPact</span>
         </div>
         <div className="flex items-center gap-1.5">
           {userProfile && userProfile.streak > 0 && (
-            <span className="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-2 py-1 rounded-full inline-flex items-center gap-1">
+            <span className="text-[10px] font-bold text-orange-500 bg-orange-100 px-2 py-1 rounded-full inline-flex items-center gap-1">
               <Flame className="h-3 w-3" />
               {userProfile.streak}
             </span>
           )}
           <LangToggle />
-          <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-500/10">
-            <div className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            <span className="text-[9px] text-emerald-400 font-semibold">ID</span>
+          <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-emerald-100">
+            <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            <span className="text-[9px] text-emerald-600 font-semibold">ID</span>
           </div>
         </div>
       </header>
