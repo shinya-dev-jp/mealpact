@@ -49,6 +49,33 @@ function AppSkeleton() {
 }
 
 // ---------------------------------------------------------------------------
+// Not in World App Screen
+// ---------------------------------------------------------------------------
+function NotInWorldAppScreen() {
+  const { t } = useI18n();
+  return (
+    <div className="mx-auto max-w-md min-h-dvh flex flex-col items-center justify-center bg-gradient-to-b from-[#f5f0ff] via-[#ede8ff] to-[#e8e0ff] px-8 gap-6 text-center">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/icon-512-transparent.png" alt="MealPact" width={80} height={80} className="drop-shadow-lg opacity-90" />
+      <div>
+        <h1 className="text-2xl font-black text-gray-900">{t("notInWorldApp.title")}</h1>
+        <p className="text-gray-500 text-sm mt-2 leading-relaxed whitespace-pre-line max-w-[280px]">
+          {t("notInWorldApp.message")}
+        </p>
+      </div>
+      <a
+        href="https://worldcoin.org/download"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-6 py-3 rounded-2xl bg-orange-500 hover:bg-orange-400 text-white font-bold text-sm shadow-lg shadow-orange-300/40 transition-all"
+      >
+        {t("notInWorldApp.button")}
+      </a>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Wallet Auth Screen (SIWE)
 // ---------------------------------------------------------------------------
 function WalletAuthScreen({
@@ -199,6 +226,12 @@ function MealPactApp() {
   }, []);
 
   const isPreview = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("preview") === "1";
+  const isInWorldApp = typeof window !== "undefined" && MiniKit.isInstalled();
+
+  if (!isInWorldApp && !isPreview) {
+    return <NotInWorldAppScreen />;
+  }
+
   if (!walletAddress && !isPreview) {
     return <WalletAuthScreen onAuthSuccess={onAuthenticated} />;
   }

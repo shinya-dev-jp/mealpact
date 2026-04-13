@@ -2,12 +2,10 @@
   "app.title": "Daily Predict",
   "app.offline": "Você está offline. Alguns recursos podem não funcionar.",
   "app.verified": "Verificado",
-
   "tabs.predict": "Prever",
   "tabs.results": "Resultados",
   "tabs.ranking": "Ranking",
   "tabs.profile": "Perfil",
-
   "predict.todaysQuestion": "Pergunta de hoje",
   "predict.predicted": "previram",
   "predict.lockedAfterTapping": "Bloqueado após tocar",
@@ -21,14 +19,12 @@
   "predict.noQuestion": "A pergunta de hoje está a caminho",
   "predict.noQuestionSub": "Volte em breve — uma nova previsão chega todo dia.",
   "predict.streak": "Sequência de {n} dias",
-
   "locked.title": "Previsão registrada!",
   "locked.subtitle": "Sua resposta foi salva",
   "locked.youSaid": "Você disse: {label}",
   "locked.agreeWithYou": "concordam com você",
   "locked.share": "Compartilhe sua previsão",
   "locked.comeBack": "Resultados amanhã — não quebre sua sequência!",
-
   "result.yesterdays": "Previsão de ontem",
   "result.gotItRight": "Você acertou!",
   "result.notQuite": "Não foi dessa vez",
@@ -47,7 +43,6 @@
   "result.notResolved": "A previsão de ontem ainda não foi resolvida.",
   "result.yes": "Sim",
   "result.no": "Não",
-
   "leaderboard.title": "Placar",
   "leaderboard.weekly": "Semanal",
   "leaderboard.monthly": "Mensal",
@@ -59,7 +54,6 @@
   "leaderboard.dayStreak": "Sequência de {n} dias",
   "leaderboard.you": "Você",
   "leaderboard.top": "Top {n}%",
-
   "profile.worldIdVerified": "World ID Verificado",
   "profile.pts": "pts",
   "profile.predictions": "Previsões",
@@ -81,7 +75,6 @@
   "profile.legendCorrect": "Correta",
   "profile.legendWrong": "Errada",
   "profile.legendMissed": "Perdida",
-
   "verify.subtitle": "Preveja eventos do mundo real com humanos verificados ao redor do globo.",
   "verify.feature1": "Uma pergunta por dia — vote Sim ou Não",
   "verify.feature2": "Apenas humanos verificados podem participar",
@@ -90,22 +83,18 @@
   "verify.verifying": "Entrando...",
   "verify.notInWorldApp": "Abra este app no World App para entrar com sua wallet.",
   "verify.footer": "Entre com sua wallet World — uma pessoa, um voto",
-
   "predict.verifiedOnly": "Apenas Humanos Verificados",
   "predict.verifying": "Verificando com World ID...",
-
   "category.crypto": "Cripto",
   "category.sports": "Esportes",
   "category.weather": "Clima",
   "category.tech": "Tecnologia",
   "category.world": "Mundo",
   "category.entertainment": "Entretenimento",
-
   "wld.ifCorrect": "+0.001 WLD se acertar",
   "wld.comingSoon": "Em Breve",
   "wld.earnWLD": "Ganhe WLD por previsões corretas",
   "wld.rewardsComingSoon": "Recompensas WLD em breve",
-
   "rewards.comingSoon": "Em Breve",
   "rewards.title": "Recompensas Semanais de Login",
   "rewards.subtitle": "Ganhe WLD só por aparecer todos os dias",
@@ -115,5 +104,8 @@
   "rewards.rule1": "Preveja diariamente para manter sua sequência",
   "rewards.rule2": "Ganhe 0.001 WLD por cada dia de participação",
   "rewards.rule3": "Complete 7 dias para um bônus de 0.01 WLD",
-  "rewards.rule4": "Depositado automaticamente na sua carteira World App"
+  "rewards.rule4": "Depositado automaticamente na sua carteira World App",
+  "notInWorldApp.title": "World App Necessário",
+  "notInWorldApp.message": "MealPact é um Mini App do World App.\nAbra-o dentro do World App para continuar.",
+  "notInWorldApp.button": "Obter World App"
 }

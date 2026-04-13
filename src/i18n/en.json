@@ -1,11 +1,9 @@
 {
   "app.title": "MealPact",
   "app.offline": "You are offline. Some features may not work.",
-
   "tabs.log": "Log",
   "tabs.challenge": "Challenge",
   "tabs.profile": "Profile",
-
   "auth.title": "MealPact",
   "auth.subtitle": "Track meals with AI.\nCommit to healthy habits with WLD.",
   "auth.feature1": "Snap a photo — AI estimates calories instantly",
@@ -15,7 +13,6 @@
   "auth.verifying": "Signing in...",
   "auth.notInWorldApp": "Please open this app inside World App.",
   "auth.footer": "Powered by World ID — one wallet, one account",
-
   "log.title": "Today's Meals",
   "log.totalCalories": "Total Calories",
   "log.target": "Target: {n} kcal",
@@ -43,7 +40,6 @@
   "log.takePhoto": "Take Photo",
   "log.choosePhoto": "Choose from Album",
   "log.analysisError": "Could not analyze photo. Please try again.",
-
   "challenge.title": "Weekly Challenge",
   "challenge.thisWeek": "This Week",
   "challenge.progress": "{n}/7 days logged",
@@ -67,7 +63,6 @@
   "challenge.noChallenge": "No active challenge this week",
   "challenge.joinSuccess": "Successfully joined!",
   "challenge.joinError": "Failed to join. Please try again.",
-
   "profile.title": "Profile",
   "profile.streak": "Day Streak",
   "profile.bestStreak": "Best Streak",
@@ -87,5 +82,8 @@
   "profile.address": "Wallet",
   "profile.language": "Language",
   "profile.langJa": "日本語",
-  "profile.langEn": "English"
+  "profile.langEn": "English",
+  "notInWorldApp.title": "World App Required",
+  "notInWorldApp.message": "MealPact is a World App Mini App.\nOpen it inside the World App to continue.",
+  "notInWorldApp.button": "Get World App"
 }

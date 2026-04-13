@@ -1,11 +1,9 @@
 {
   "app.title": "MealPact",
   "app.offline": "オフラインです。一部の機能が利用できません。",
-
   "tabs.log": "食事記録",
   "tabs.challenge": "チャレンジ",
   "tabs.profile": "プロフィール",
-
   "auth.title": "MealPact",
   "auth.subtitle": "AIで食事を記録。\nWLDで健康習慣にコミット。",
   "auth.feature1": "写真を撮るだけ — AIがカロリーを瞬時に推定",
@@ -15,7 +13,6 @@
   "auth.verifying": "ログイン中...",
   "auth.notInWorldApp": "World App内でこのアプリを開いてください。",
   "auth.footer": "World IDで認証 — 1人1アカウント",
-
   "log.title": "今日の食事",
   "log.totalCalories": "合計カロリー",
   "log.target": "目標: {n} kcal",
@@ -43,7 +40,6 @@
   "log.takePhoto": "カメラで撮る",
   "log.choosePhoto": "アルバムから選ぶ",
   "log.analysisError": "写真の解析に失敗しました。もう一度お試しください。",
-
   "challenge.title": "週間チャレンジ",
   "challenge.thisWeek": "今週",
   "challenge.progress": "{n}/7日間記録済み",
@@ -67,7 +63,6 @@
   "challenge.noChallenge": "今週のチャレンジはありません",
   "challenge.joinSuccess": "参加しました！",
   "challenge.joinError": "参加に失敗しました。もう一度お試しください。",
-
   "profile.title": "プロフィール",
   "profile.streak": "日連続記録",
   "profile.bestStreak": "最長連続記録",
@@ -87,5 +82,8 @@
   "profile.address": "ウォレット",
   "profile.language": "言語",
   "profile.langJa": "日本語",
-  "profile.langEn": "English"
+  "profile.langEn": "English",
+  "notInWorldApp.title": "World Appが必要です",
+  "notInWorldApp.message": "MealPactはWorld App専用のミニアプリです。\nWorld Appを開いてアクセスしてください。",
+  "notInWorldApp.button": "World Appをダウンロード"
 }

@@ -2,12 +2,10 @@
   "app.title": "Daily Predict",
   "app.offline": "오프라인 상태입니다. 일부 기능이 작동하지 않을 수 있습니다.",
   "app.verified": "인증됨",
-
   "tabs.predict": "예측",
   "tabs.results": "결과",
   "tabs.ranking": "랭킹",
   "tabs.profile": "프로필",
-
   "predict.todaysQuestion": "오늘의 질문",
   "predict.predicted": "명이 예측함",
   "predict.lockedAfterTapping": "탭하면 변경 불가",
@@ -21,14 +19,12 @@
   "predict.noQuestion": "오늘의 질문이 곧 도착합니다",
   "predict.noQuestionSub": "매일 새로운 예측이 등장합니다. 잠시 후 다시 확인해 주세요.",
   "predict.streak": "{n}일 연속",
-
   "locked.title": "예측 완료!",
   "locked.subtitle": "답변이 기록되었습니다",
   "locked.youSaid": "당신의 답: {label}",
   "locked.agreeWithYou": "명이 당신과 동의",
   "locked.share": "예측 공유하기",
   "locked.comeBack": "결과는 내일 발표 — 연속 기록을 이어가세요!",
-
   "result.yesterdays": "어제의 예측",
   "result.gotItRight": "정답입니다!",
   "result.notQuite": "아쉽네요",
@@ -47,7 +43,6 @@
   "result.notResolved": "어제의 예측이 아직 확정되지 않았습니다.",
   "result.yes": "Yes",
   "result.no": "No",
-
   "leaderboard.title": "리더보드",
   "leaderboard.weekly": "주간",
   "leaderboard.monthly": "월간",
@@ -59,7 +54,6 @@
   "leaderboard.dayStreak": "{n}일 연속",
   "leaderboard.you": "나",
   "leaderboard.top": "상위 {n}%",
-
   "profile.worldIdVerified": "World ID 인증됨",
   "profile.pts": "포인트",
   "profile.predictions": "예측 수",
@@ -81,7 +75,6 @@
   "profile.legendCorrect": "정답",
   "profile.legendWrong": "오답",
   "profile.legendMissed": "미참여",
-
   "verify.subtitle": "전 세계 인증된 사용자와 함께 현실 세계의 사건을 예측하세요.",
   "verify.feature1": "매일 하나의 질문에 Yes/No 투표",
   "verify.feature2": "인증된 인간만 참여 가능",
@@ -90,22 +83,18 @@
   "verify.verifying": "로그인 중...",
   "verify.notInWorldApp": "World App에서 이 앱을 열어 지갑으로 로그인해 주세요.",
   "verify.footer": "World 지갑으로 로그인 — 한 사람, 한 표",
-
   "predict.verifiedOnly": "인증된 인간만",
   "predict.verifying": "World ID로 인증 중...",
-
   "category.crypto": "암호화폐",
   "category.sports": "스포츠",
   "category.weather": "날씨",
   "category.tech": "기술",
   "category.world": "세계",
   "category.entertainment": "엔터테인먼트",
-
   "wld.ifCorrect": "정답 시 +0.001 WLD",
   "wld.comingSoon": "출시 예정",
   "wld.earnWLD": "정답 시 WLD 획득",
   "wld.rewardsComingSoon": "WLD 보상 곧 시작",
-
   "rewards.comingSoon": "출시 예정",
   "rewards.title": "주간 로그인 보상",
   "rewards.subtitle": "매일 참여하기만 해도 WLD 획득",
@@ -115,5 +104,8 @@
   "rewards.rule1": "매일 예측해서 연속 기록을 유지",
   "rewards.rule2": "참여한 날마다 0.001 WLD 획득",
   "rewards.rule3": "7일 연속 달성 시 0.01 WLD 보너스",
-  "rewards.rule4": "World App 지갑에 자동 입금"
+  "rewards.rule4": "World App 지갑에 자동 입금",
+  "notInWorldApp.title": "World App이 필요합니다",
+  "notInWorldApp.message": "MealPact는 World App 전용 미니앱입니다.\nWorld App에서 열어주세요.",
+  "notInWorldApp.button": "World App 다운로드"
 }
