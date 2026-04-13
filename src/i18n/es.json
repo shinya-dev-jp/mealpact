@@ -107,5 +107,7 @@
   "rewards.rule4": "Depositado automáticamente en tu billetera de World App",
   "notInWorldApp.title": "Requiere World App",
   "notInWorldApp.message": "MealPact es una Mini App de World App.\nÁbrela dentro de World App para continuar.",
-  "notInWorldApp.button": "Obtener World App"
+  "notInWorldApp.button": "Obtener World App",
+  "profile.invite": "Invitar amigo",
+  "challenge.noChallengeSub": "Vuelve pronto para el próximo desafío"
 }

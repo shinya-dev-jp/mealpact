@@ -85,5 +85,7 @@
   "profile.langEn": "English",
   "notInWorldApp.title": "World App Required",
   "notInWorldApp.message": "MealPact is a World App Mini App.\nOpen it inside the World App to continue.",
-  "notInWorldApp.button": "Get World App"
+  "notInWorldApp.button": "Get World App",
+  "profile.invite": "Invite a Friend",
+  "challenge.noChallengeSub": "Check back for the next challenge"
 }

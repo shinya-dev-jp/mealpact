@@ -107,9 +107,14 @@ export function ChallengeScreen() {
 
   if (!currentChallenge) {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center gap-3 text-white/30 px-6">
-        <Trophy className="h-12 w-12" />
-        <p className="text-sm">{t("challenge.noChallenge")}</p>
+      <div className="flex-1 flex flex-col items-center justify-center gap-4 px-6 text-center">
+        <div className="w-20 h-20 rounded-3xl bg-orange-50 border border-orange-100 flex items-center justify-center">
+          <Trophy className="h-10 w-10 text-orange-300" />
+        </div>
+        <div>
+          <p className="text-gray-700 font-semibold">{t("challenge.noChallenge")}</p>
+          <p className="text-gray-400 text-sm mt-1">{t("challenge.noChallengeSub")}</p>
+        </div>
       </div>
     );
   }

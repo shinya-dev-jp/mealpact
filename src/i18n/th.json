@@ -107,5 +107,7 @@
   "rewards.rule4": "ฝากเข้ากระเป๋า World App อัตโนมัติ",
   "notInWorldApp.title": "ต้องใช้ World App",
   "notInWorldApp.message": "MealPact เป็นแอปขนาดเล็กของ World App\nกรุณาเปิดใน World App เพื่อใช้งาน",
-  "notInWorldApp.button": "ดาวน์โหลด World App"
+  "notInWorldApp.button": "ดาวน์โหลด World App",
+  "profile.invite": "เชิญเพื่อน",
+  "challenge.noChallengeSub": "รอดูความท้าทายถัดไป"
 }
