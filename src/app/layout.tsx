@@ -2,6 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { MiniKitWrapper } from "@/components/providers/MiniKitWrapper";
 import { Toaster } from "@worldcoin/mini-apps-ui-kit-react";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const BASE_URL = "https://mealpact.vercel.app";
 
@@ -70,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <head>
         {/* Preconnect to Supabase to shave ~100-300ms off the first /api call */}
         <link rel="preconnect" href="https://mlicssmpfdogtippxqtg.supabase.co" />
