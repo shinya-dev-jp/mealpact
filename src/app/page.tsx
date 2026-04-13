@@ -128,7 +128,7 @@ function WalletAuthScreen({
         {/* Hero */}
         <div className="flex flex-col items-center gap-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icon-512.png" alt="MealPact" width={96} height={96} className="drop-shadow-xl" />
+          <img src="/icon-512-transparent.png" alt="MealPact" width={96} height={96} className="drop-shadow-lg" />
           <div className="text-center">
             <h1 className="text-3xl font-black text-gray-900 tracking-tight">{t("auth.title")}</h1>
             <p className="text-gray-500 text-sm mt-1 leading-relaxed max-w-[260px] whitespace-pre-line">
@@ -209,7 +209,7 @@ function MealPactApp() {
       <header className="flex items-center justify-between px-5 py-3.5 border-b border-gray-200 bg-white/90 backdrop-blur-lg sticky top-0 z-50">
         <div className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/icon-512.png" alt="" width={24} height={24} className="drop-shadow-sm" />
+          <img src="/icon-512-transparent.png" alt="" width={24} height={24} />
           <span className="font-bold text-gray-900 text-sm tracking-tight">MealPact</span>
         </div>
         <div className="flex items-center gap-1.5">
