@@ -415,9 +415,9 @@ export function LogScreen() {
 
       {/* Challenge info card */}
       <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-200">
-        <p className="text-xs font-semibold text-emerald-700 mb-2">週間チャレンジの仕組み</p>
+        <p className="text-xs font-semibold text-emerald-700 mb-2">{t("challenge.howItWorks")}</p>
         <div className="space-y-1.5">
-          {["週初めに少額のWLDを預ける", "週5日以上食事を記録する", "成功者が脱落者のWLDを山分け"].map((rule, i) => (
+          {[t("challenge.rule1"), t("challenge.rule2"), t("challenge.rule3")].map((rule, i) => (
             <div key={i} className="flex items-start gap-2 text-xs text-gray-500">
               <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">
                 {i + 1}
@@ -426,7 +426,7 @@ export function LogScreen() {
             </div>
           ))}
         </div>
-        <p className="text-[10px] text-gray-400 mt-2">→ チャレンジタブから参加できます</p>
+        <p className="text-[10px] text-gray-400 mt-2">→ {t("tabs.challenge")}</p>
       </div>
 
       {/* Meal list */}
