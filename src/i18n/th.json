@@ -109,5 +109,7 @@
   "notInWorldApp.message": "MealPact เป็นแอปขนาดเล็กของ World App\nกรุณาเปิดใน World App เพื่อใช้งาน",
   "notInWorldApp.button": "ดาวน์โหลด World App",
   "profile.invite": "เชิญเพื่อน",
-  "challenge.noChallengeSub": "รอดูความท้าทายถัดไป"
+  "challenge.noChallengeSub": "รอดูความท้าทายถัดไป",
+  "notInWorldApp.line1": "MealPact เป็นแอปขนาดเล็กของ World App",
+  "notInWorldApp.line2": "กรุณาเปิดใน World App เพื่อใช้งาน"
 }

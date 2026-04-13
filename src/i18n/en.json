@@ -87,5 +87,7 @@
   "notInWorldApp.message": "MealPact is a World App Mini App.\nOpen it inside the World App to continue.",
   "notInWorldApp.button": "Get World App",
   "profile.invite": "Invite a Friend",
-  "challenge.noChallengeSub": "Check back for the next challenge"
+  "challenge.noChallengeSub": "Check back for the next challenge",
+  "notInWorldApp.line1": "MealPact is a World App Mini App.",
+  "notInWorldApp.line2": "Open it inside the World App to continue."
 }

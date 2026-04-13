@@ -87,5 +87,7 @@
   "notInWorldApp.message": "MealPactはWorld App専用のミニアプリです。\nWorld Appを開いてアクセスしてください。",
   "notInWorldApp.button": "World Appをダウンロード",
   "profile.invite": "友達を招待する",
-  "challenge.noChallengeSub": "次のチャレンジをお待ちください"
+  "challenge.noChallengeSub": "次のチャレンジをお待ちください",
+  "notInWorldApp.line1": "MealPactはWorld App専用のミニアプリです。",
+  "notInWorldApp.line2": "World Appを開いてアクセスしてください。"
 }

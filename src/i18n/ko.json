@@ -109,5 +109,7 @@
   "notInWorldApp.message": "MealPact는 World App 전용 미니앱입니다.\nWorld App에서 열어주세요.",
   "notInWorldApp.button": "World App 다운로드",
   "profile.invite": "친구 초대하기",
-  "challenge.noChallengeSub": "다음 챌린지를 기다려주세요"
+  "challenge.noChallengeSub": "다음 챌린지를 기다려주세요",
+  "notInWorldApp.line1": "MealPact는 World App 전용 미니앱입니다.",
+  "notInWorldApp.line2": "World App에서 열어주세요."
 }
