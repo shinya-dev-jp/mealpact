@@ -59,12 +59,8 @@ function NotInWorldAppScreen() {
       <img src="/icon-512-transparent.png" alt="MealPact" width={80} height={80} className="drop-shadow-lg opacity-90" />
       <div>
         <h1 className="text-2xl font-black text-gray-900">{t("notInWorldApp.title")}</h1>
-        <p className="text-gray-500 text-sm mt-2 leading-relaxed max-w-[280px]">
-          {t("notInWorldApp.line1")}
-        </p>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-[280px]">
-          {t("notInWorldApp.line2")}
-        </p>
+        <p className="text-gray-500 text-sm mt-2">{t("notInWorldApp.line1")}</p>
+        <p className="text-gray-500 text-sm">{t("notInWorldApp.line2")}</p>
       </div>
       <a
         href="https://worldcoin.org/download"
