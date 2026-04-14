@@ -1,0 +1,80 @@
+{
+  "basic": {
+    "app_name": "MealPact",
+    "publisher": "Shinya Dev",
+    "app_url": "https://mealpact.vercel.app",
+    "official_website": "https://mealpact.vercel.app",
+    "is_mini_app": true,
+    "compliance_gambling": false,
+    "verified_humans_only": true,
+    "category": "Productivity",
+    "support_type": "email",
+    "support_value": "shinya.yuda.b@gmail.com"
+  },
+
+  "images": {
+    "app_logo": "public/icon-512.png",
+    "content_card": "public/content-card.png",
+    "showcase_images": [
+      "public/showcase-1.png",
+      "public/showcase-2.png",
+      "public/showcase-3.png"
+    ],
+    "meta_tag_image": null
+  },
+
+  "countries": "all",
+
+  "languages": ["en", "ja", "ko", "es", "pt", "th"],
+
+  "localisations": {
+    "en": {
+      "app_name": "MealPact",
+      "short_name": "MealPact",
+      "tag_line": "AI calorie tracker with WLD commitment",
+      "description": "MealPact combines AI-powered food analysis with a commitment challenge. Snap a photo of your meal, let Gemini AI instantly calculate calories and nutrients, and join weekly challenges where you deposit 0.1 WLD. Log meals for 5+ days and earn your deposit back plus bonus from dropouts. Build healthy habits with real stakes and real rewards."
+    },
+    "ja": {
+      "app_name": "MealPact",
+      "short_name": "MealPact",
+      "tag_line": "AI食事解析 + WLDコミットメント",
+      "description": "MealPactはAI食事解析とコミットメントチャレンジを組み合わせたアプリです。食事を撮影するだけでGemini AIがカロリーと栄養素を即時計算。0.1 WLDを預けて週間チャレンジに参加し、5日以上記録すれば預入金+ボーナスが返還されます。本気のステークスで健康習慣を作りましょう。"
+    },
+    "ko": {
+      "app_name": "MealPact",
+      "short_name": "MealPact",
+      "tag_line": "AI 칼로리 트래커 + WLD 커밋먼트",
+      "description": "MealPact는 AI 음식 분석과 커밋먼트 챌린지를 결합한 앱입니다. 식사 사진을 찍으면 Gemini AI가 즉시 칼로리와 영양소를 계산합니다. 0.1 WLD를 예치하고 주간 챌린지에 참여하세요. 5일 이상 기록하면 예치금과 보너스를 돌려받습니다. 진정한 스테이크로 건강한 습관을 만드세요."
+    },
+    "es": {
+      "app_name": "MealPact",
+      "short_name": "MealPact",
+      "tag_line": "Contador de calorías con IA y compromiso WLD",
+      "description": "MealPact combina análisis de alimentos con IA y un desafío de compromiso. Toma una foto de tu comida y Gemini AI calculará calorías y nutrientes al instante. Deposita 0.1 WLD y únete a desafíos semanales. Registra comidas por 5+ días y recupera tu depósito más bonificación. Construye hábitos saludables con recompensas reales."
+    },
+    "pt": {
+      "app_name": "MealPact",
+      "short_name": "MealPact",
+      "tag_line": "Rastreador de calorias com IA e compromisso WLD",
+      "description": "MealPact combina análise de alimentos com IA e um desafio de compromisso. Tire uma foto da sua refeição e a Gemini AI calculará calorias e nutrientes instantaneamente. Deposite 0.1 WLD e participe de desafios semanais. Registre refeições por 5+ dias e recupere seu depósito mais bônus. Construa hábitos saudáveis com recompensas reais."
+    },
+    "th": {
+      "app_name": "MealPact",
+      "short_name": "MealPact",
+      "tag_line": "AI ติดตามแคลอรี่ + WLD คอมมิตเมนท์",
+      "description": "MealPact ผสมผสานการวิเคราะห์อาหารด้วย AI กับชาเลนจ์คอมมิตเมนท์ ถ่ายรูปอาหาร Gemini AI จะคำนวณแคลอรี่และสารอาหารทันที ฝาก 0.1 WLD เข้าร่วมชาเลนจ์รายสัปดาห์ บันทึกอาหาร 5+ วัน รับเงินฝากคืนพร้อมโบนัส สร้างนิสัยสุขภาพด้วยรางวัลจริง"
+    }
+  },
+
+  "mini_app_permissions": {
+    "whitelisted_payment_addresses": [],
+    "disable_whitelist": false,
+    "permit2_tokens": ["WLD"]
+  },
+
+  "_notes": {
+    "status": "未提出 — WLD預入デプロイ完了後に提出可",
+    "missing_images": ["content-card.png", "showcase-1/2/3.png — 要生成"],
+    "blocker": "NEXT_PUBLIC_CHALLENGE_RECEIVER の設定が必要（Shinyaアクション）"
+  }
+}
