@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Smartphone, Pencil, Check, X, ExternalLink, Share2, User } from "lucide-react";
+import { Wallet, Pencil, Check, X, ExternalLink, Share2, User } from "lucide-react";
 import { useI18n } from "@/i18n";
 import { useApp } from "@/components/providers/AppProvider";
 
@@ -65,17 +65,8 @@ export function ProfileScreen() {
         <div>
           <p className="text-xs text-gray-400 font-mono">{shortAddress}</p>
           <div className="flex items-center gap-1.5 mt-1">
-            {userProfile?.verification_level === "orb" ? (
-              <>
-                <ShieldCheck className="h-4 w-4 text-emerald-500" />
-                <span className="text-xs text-emerald-600 font-medium">{t("profile.verifiedOrb")}</span>
-              </>
-            ) : (
-              <>
-                <Smartphone className="h-4 w-4 text-gray-400" />
-                <span className="text-xs text-gray-500">{t("profile.verifiedDevice")}</span>
-              </>
-            )}
+            <Wallet className="h-4 w-4 text-gray-400" />
+            <span className="text-xs text-gray-500">{t("profile.walletConnected")}</span>
           </div>
         </div>
       </div>

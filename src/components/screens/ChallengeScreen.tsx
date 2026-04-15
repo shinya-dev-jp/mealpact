@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Trophy, Loader2, CheckCircle2, XCircle, Info, ShieldCheck, AlertTriangle } from "lucide-react";
+import { Trophy, Loader2, CheckCircle2, XCircle, Info, AlertTriangle } from "lucide-react";
 import { useI18n } from "@/i18n";
 import { useApp } from "@/components/providers/AppProvider";
 import { MiniKit, tokenToDecimals, Tokens } from "@worldcoin/minikit-js";
@@ -21,7 +21,6 @@ export function ChallengeScreen() {
     daysLoggedThisWeek,
     daysLeft,
     authToken,
-    userProfile,
     refreshChallenge,
   } = useApp();
 
@@ -128,21 +127,6 @@ export function ChallengeScreen() {
           {t("challenge.daysLeft").replace("{n}", String(daysLeft))}
         </span>
       </div>
-
-      {/* Orb bonus banner — shown only to device-verified users */}
-      {userProfile?.verification_level !== "orb" && (
-        <motion.div
-          initial={{ opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-3.5"
-        >
-          <ShieldCheck className="h-5 w-5 text-amber-400 shrink-0" />
-          <div className="flex-1 min-w-0">
-            <p className="text-xs font-semibold text-amber-300">Orbボーナス（近日公開）</p>
-            <p className="text-[11px] text-white/50 mt-0.5">Orb認証済みユーザーは報酬が1.5倍になる予定です</p>
-          </div>
-        </motion.div>
-      )}
 
       {/* Loss-aversion banner — shown when in challenge and at risk */}
       {myEntry && myEntry.is_success === null && daysLeft <= 3 && daysLoggedThisWeek < 5 && (
