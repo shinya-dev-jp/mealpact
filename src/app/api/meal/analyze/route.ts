@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 import { authenticateRequest } from "@/lib/auth";
 import { logError } from "@/lib/server-log";
 
@@ -20,6 +20,9 @@ const ANALYZE_PROMPT = `Analyze this food photo. Return ONLY valid JSON, no expl
  * POST /api/meal/analyze
  * Body: { image_base64: string, image_type: string }
  * Returns: AnalyzeResponse JSON
+ *
+ * Uses @google/genai SDK (gemini-2.5-flash) — migrated from deprecated
+ * @google/generative-ai SDK on 2026-04-18 after MealPact app review reject.
  */
 export async function POST(req: NextRequest) {
   const address = authenticateRequest(req);
@@ -49,18 +52,26 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const genai = new GoogleGenerativeAI(apiKey);
-    const model = genai.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const ai = new GoogleGenAI({ apiKey });
 
-    const imagePart = {
-      inlineData: {
-        data: image_base64,
-        mimeType: image_type as "image/jpeg" | "image/png" | "image/webp",
-      },
-    };
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: [
+        {
+          inlineData: {
+            mimeType: image_type,
+            data: image_base64,
+          },
+        },
+        { text: ANALYZE_PROMPT },
+      ],
+    });
 
-    const result = await model.generateContent([ANALYZE_PROMPT, imagePart]);
-    const text = result.response.text().trim();
+    const text = (response.text ?? "").trim();
+    if (!text) {
+      logError("api/meal/analyze", "Empty response from Gemini");
+      return NextResponse.json({ error: "Failed to analyze image" }, { status: 500 });
+    }
 
     // Strip markdown code fences if present
     const cleaned = text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "");
